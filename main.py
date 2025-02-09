@@ -1,9 +1,11 @@
-import random
+import random, os
+from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, Router, F
 from aiogram.filters import Command
 from aiogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
-BOT_TOKEN = '7923159442:AAHSTM3XUMKtgt8LuBp6yWX_2IChuuKQPJY'
+load_dotenv()
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot=bot)
